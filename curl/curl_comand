@@ -1,0 +1,13 @@
+
+ //register
+ curl -d '{"username":"arsen778", "password":"test","email":"email@mail.ru","firstName":"valod","lastName":"sarib"}' -H "Content-Type: application/json" -X POST http://localhost:8075/api/v1/auth/register
+
+
+//auto - login
+
+curl -d '{"username":"arsen778", "password":"test"}' -H "Content-Type: application/json" -X POST http://localhost:8075/api/v1/auth/login
+
+
+//get
+
+curl -H "Authorization: Bearer_eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnNlbjc3OCIsInJvbGVzIjpbXSwiaWF0IjoxNTkzNTIwMDYwLCJleHAiOjE1OTM1MjM2NjB9.OefKdMxUyr2gLWvTAYN8H0vYAepI6L6GDv_061dkMpY" -X GET http://localhost:8075/api/v1/users/2
